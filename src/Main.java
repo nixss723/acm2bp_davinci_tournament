@@ -37,6 +37,7 @@ public class Main {
             profesPoo,
             estudiantesPoo
         );
+        System.out.println(primerParcial.generateMarker());
 
     }
 }
