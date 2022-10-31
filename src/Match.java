@@ -29,35 +29,53 @@ public class Match {
         this.setVisitantTeam(visitant);
 
     }
-    public String generateMarker(){
+
+    public void makeGoal(Team team, Player player) {
+        if(team.getName() == this.localTeam.getName()) {
+            this.localGoalCounter++;
+            //setLocalGoalCounter(getLocalGoalCounter()+1);
+        }
+        if(team.getName() == this.getVisitantTeam().getName()){
+            this.visitantGoalCounter++;
+        }
+        player.incrementGoalCounter();
+    }
+
+    public String generateMarker() {
         return this.getLocalGoalCounter() + "-" + this.getVisitantGoalCounter();
     }
 
-    public void setLocation(String location){
+    public void setLocation(String location) {
         this.location = location;
         return;
     }
-    public String getLocation(){
+
+    public String getLocation() {
         return this.location;
     }
 
-    public void setDate(Date date){
+    public void setDate(Date date) {
         this.date = date;
         return;
     }
-    public Date getdate(){
+
+    public Date getdate() {
         return this.date;
     }
-    public void setLocalTeam(Team localTeam){
+
+    public void setLocalTeam(Team localTeam) {
         this.localTeam = localTeam;
     }
-    public void setVisitantTeam(Team visitantTeam){
+
+    public void setVisitantTeam(Team visitantTeam) {
         this.visitantTeam = visitantTeam;
     }
-    public Team getLocalTeam(){
+
+    public Team getLocalTeam() {
         return this.localTeam;
     }
-    public void incrementLocalCounter(){
+
+    public void incrementLocalCounter() {
         this.localGoalCounter++;
     }
 
@@ -80,6 +98,6 @@ public class Match {
     public Team getVisitantTeam() {
         return visitantTeam;
     }
-
+}
 
 

@@ -38,6 +38,10 @@ public class Main {
             estudiantesPoo
         );
         System.out.println(primerParcial.generateMarker());
+        primerParcial.makeGoal(profesPoo, profesPoo.getPlayers().get(1));
+        System.out.println(primerParcial.generateMarker());
+        primerParcial.makeGoal(estudiantesPoo, estudiantesPoo.getPlayers().get(0));
+
 
     }
 }
